@@ -27,6 +27,58 @@ body {
 .container .button:hover a {
   letter-spacing: 3px;
 }
+.container .button:hover::before {
+  bottom: 0;
+  height: 50%;
+  width: 80%;
+  border-radius: 30px;
+  transition-delay: 0.6s;
+}
+.container .button:hover::after {
+  top: 0;
+  height: 50%;
+  width: 80%;
+  border-radius: 30px;
+  transition-delay: 0.6s;
+}
+.container .button:nth-child(1)::before, .container .button:nth-child(1)::after {
+  background: #000;
+  box-shadow: 0 0 6px #000, 0 0 15px #000, 0 0 30px #000, 0 0 60px #000;
+}
+.container .button:nth-child(2)::before, .container .button:nth-child(2)::after {
+  background: #e14aff;
+  box-shadow: 0 0 6px #e14aff, 0 0 15px #e14aff, 0 0 30px #e14aff, 0 0 60px #e14aff;
+}
+.container .button:nth-child(3)::before, .container .button:nth-child(3)::after {
+  background: #3246ff;
+  box-shadow: 0 0 6px #3246ff, 0 0 15px #3246ff, 0 0 30px #3246ff, 0 0 60px #3246ff;
+}
+.container .button::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 30px;
+  height: 10px;
+  border-radius: 10px;
+  transform: translateX(-50%);
+  background: #ff0461;
+  transition: 0.6s;
+  transition-delay: 0;
+}
+.container .button::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -5px;
+  width: 30px;
+  height: 10px;
+  border-radius: 10px;
+  transform: translateX(-50%);
+  background: #ff0461;
+  transition: 0.6s;
+  transition-delay: 0;
+}
 .container .button a {
   display: flex;
   justify-content: center;
@@ -48,6 +100,8 @@ body {
   text-decoration: none;
   transition: 0.6s;
   overflow: hidden;
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
 }
 .container .button a::before {
   content: "";
