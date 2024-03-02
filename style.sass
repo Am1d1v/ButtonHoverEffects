@@ -250,51 +250,63 @@
         
         
     // Wavy Effect
+// body
+//     display: flex
+//     align-items: center
+//     justify-content: center
+//     min-height: 100vh  
+//     background: #353535   
+//     font-family: sans-serif   
+
+// a
+//     text-decoration: none    
+//     padding: 15px 30px
+//     color: #00aeff
+//     font-size: 30px
+//     letter-spacing: 3px
+//     text-transform: uppercase
+//     border: 3px solid #00aeff
+//     position: relative
+//     overflow: hidden
+//     transition: all 1.5s
+//     &:hover
+//         color: #333
+//         .wave
+//             transform: translateY(-60px)
+//     & .wave
+//         position: absolute
+//         width: 100%
+//         height: 100%
+//         top: calc(100% + 22px)
+//         left: 0
+//         background-color: #00aeff
+//         transition: all 1.5s
+//         z-index: -1
+//         &::before
+//             content: ''
+//             position: absolute
+//             top: -22px
+//             left: 0
+//             width: 100%
+//             height: 22px
+//             background: url('assets/wave.png')
+//             animation: waveAnimation 1.8s linear infinite
+
+// @keyframes waveAnimation
+//     0%
+//         background-position-x: 0
+//     100%
+//         background-position-x: 118px    
+
+
+    // First Letter Rotating Effect
 body
     display: flex
     align-items: center
     justify-content: center
     min-height: 100vh  
-    background: #353535   
+    background: #fff
     font-family: sans-serif   
 
 a
-    text-decoration: none    
-    padding: 15px 30px
-    color: #00aeff
-    font-size: 30px
-    letter-spacing: 3px
-    text-transform: uppercase
-    border: 3px solid #00aeff
-    position: relative
-    overflow: hidden
-    transition: all 1.5s
-    &:hover
-        color: #333
-        .wave
-            transform: translateY(-60px)
-    & .wave
-        position: absolute
-        width: 100%
-        height: 100%
-        top: calc(100% + 22px)
-        left: 0
-        background-color: #00aeff
-        transition: all 1.5s
-        z-index: -1
-        &::before
-            content: ''
-            position: absolute
-            top: -22px
-            left: 0
-            width: 100%
-            height: 22px
-            background: url('assets/wave.png')
-            animation: waveAnimation 1.8s linear infinite
-
-@keyframes waveAnimation
-    0%
-        background-position-x: 0
-    100%
-        background-position-x: 118px    
-
+    text-decoration: none
