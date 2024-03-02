@@ -15,4 +15,48 @@ body {
 
 a {
   text-decoration: none;
+  width: 180px;
+  height: 60px;
+  color: #000;
+  border: 2px solid #000;
+  text-align: center;
+  line-height: 60px;
+  font-size: 27px;
+  position: relative;
+  transition: all 0.3s;
+  overflow: hidden;
+}
+a span {
+  color: transparent;
+  position: relative;
+}
+a span::before {
+  content: "B";
+  position: absolute;
+  color: #000;
+  transition: all 0.3s;
+}
+a:hover {
+  color: #fff;
+}
+a:hover span::before {
+  color: #fff;
+  font-size: 60px;
+  transform: rotate(360deg) translateX(-25px);
+}
+a:hover::before {
+  opacity: 1;
+  transform: rotate(15deg);
+}
+a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.9s;
 }/*# sourceMappingURL=style.css.map */
