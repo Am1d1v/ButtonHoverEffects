@@ -267,6 +267,12 @@ a
     text-transform: uppercase
     border: 3px solid #00aeff
     position: relative
+    overflow: hidden
+    transition: all 1.5s
+    &:hover
+        color: #333
+        .wave
+            transform: translateY(-60px)
     & .wave
         position: absolute
         width: 100%
@@ -274,6 +280,8 @@ a
         top: calc(100% + 22px)
         left: 0
         background-color: #00aeff
+        transition: all 1.5s
+        z-index: -1
         &::before
             content: ''
             position: absolute
@@ -282,6 +290,7 @@ a
             width: 100%
             height: 22px
             background: url('assets/wave.png')
+            animation: waveAnimation 1.8s linear infinite
 
 @keyframes waveAnimation
     0%
